@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  guvi:
+    image: guvi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
