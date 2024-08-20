@@ -1,0 +1,11 @@
+# Start with the official NGINX base image
+FROM nginx:alpine
+
+# Copy custom HTML content into the NGINX web root directory
+COPY ./html /usr/share/nginx/html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start NGINX
+CMD ["nginx", "-g", "daemon off;"]
